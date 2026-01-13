@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Appraisal - Laura Flood | DGW Private Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: #0a0a0a;
+      color: #e8e8e8;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #d4af37;
+      margin-bottom: 50px;
+    }
+    
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 8px;
+      color: #d4af37;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #666;
+      letter-spacing: 2px;
+    }
+    
+    .document-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #d4af37;
+      text-align: center;
+      margin: 50px 0 20px 0;
+      letter-spacing: 3px;
+    }
+    
+    .gold-line {
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      margin: 30px auto;
+    }
+    
+    /* Client Box */
+    .client-box {
+      background: linear-gradient(135deg, #111 0%, #0d0d0d 100%);
+      border: 1px solid #1a1a1a;
+      border-left: 3px solid #d4af37;
+      padding: 35px 40px;
+      margin: 40px 0;
+    }
+    
+    .client-box h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #d4af37;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    
+    .client-row {
+      display: flex;
+      margin-bottom: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .client-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .client-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: #e8e8e8;
+    }
+    
+    /* Section Headings */
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: #d4af37;
+      margin: 50px 0 20px 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #222;
+      letter-spacing: 3px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    p {
+      margin-bottom: 18px;
+      color: #bbb;
+      text-align: justify;
+    }
+    
+    /* Disclosure Box */
+    .disclosure-box {
+      background: #0d0d0d;
+      border: 1px solid #222;
+      padding: 25px 30px;
+      margin: 30px 0;
+      border-radius: 2px;
+    }
+    
+    .disclosure-box p {
+      font-size: 14px;
+      color: #999;
+      margin: 0;
+    }
+    
+    .disclosure-box strong {
+      color: #d4af37;
+    }
+    
+    /* Valuation Box */
+    .valuation-box {
+      background: linear-gradient(135deg, #1a1510 0%, #12100c 100%);
+      border: 1px solid #d4af37;
+      padding: 40px;
+      margin: 50px 0;
+      text-align: center;
+    }
+    
+    .valuation-box h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 5px;
+      color: #d4af37;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+    
+    .valuation-row {
+      margin: 15px 0;
+    }
+    
+    .valuation-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #666;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    
+    .valuation-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: #e8e8e8;
+      font-weight: 500;
+    }
+    
+    .valuation-amount.highlight {
+      color: #d4af37;
+      font-size: 36px;
+    }
+    
+    /* Summary Table */
+    .table-container {
+      overflow-x: auto;
+      margin: 30px 0;
+    }
+    
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    
+    .summary-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: #141414;
+      color: #d4af37;
+      padding: 15px 12px;
+      text-align: left;
+      border-bottom: 2px solid #d4af37;
+    }
+    
+    .summary-table th.right { text-align: right; }
+    .summary-table th.center { text-align: center; }
+    
+    .summary-table td {
+      padding: 12px;
+      border-bottom: 1px solid #1a1a1a;
+      color: #bbb;
+      vertical-align: top;
+    }
+    
+    .summary-table tr:hover {
+      background: #111;
+    }
+    
+    .summary-table td.right { text-align: right; }
+    .summary-table td.center { text-align: center; }
+    
+    .summary-table .lot-num {
+      color: #d4af37;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    
+    .summary-table .artist {
+      font-weight: 600;
+      color: #e8e8e8;
+    }
+    
+    .summary-table .title-cell {
+      font-style: italic;
+      color: #999;
+    }
+    
+    .summary-table .edition {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      color: #666;
+    }
+    
+    .summary-table .estimate {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #ccc;
+    }
+    
+    .summary-table .totals-row {
+      background: #141414;
+      border-top: 2px solid #d4af37;
+    }
+    
+    .summary-table .totals-row td {
+      font-weight: 600;
+      color: #d4af37;
+      padding: 18px 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+    }
+    
+    /* Lot Analysis */
+    .lot-item {
+      background: #0f0f0f;
+      border-left: 3px solid #d4af37;
+      padding: 25px 30px;
+      margin: 25px 0;
+    }
+    
+    .lot-header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    
+    .lot-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      color: #d4af37;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 8px;
+    }
+    
+    .lot-artist {
+      font-size: 20px;
+      font-weight: 600;
+      color: #e8e8e8;
+    }
+    
+    .lot-work-title {
+      font-size: 18px;
+      font-style: italic;
+      color: #999;
+    }
+    
+    .lot-estimate {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #d4af37;
+      text-align: center;
+      margin: 15px 0;
+    }
+    
+    .lot-details {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      color: #555;
+      text-align: center;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+    
+    .lot-analysis {
+      font-size: 15px;
+      color: #999;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    
+    /* Signature */
+    .signature-section {
+      margin-top: 60px;
+      text-align: center;
+    }
+    
+    .signature-section .intro {
+      color: #666;
+      font-style: italic;
+      margin-bottom: 40px;
+    }
+    
+    .signature-line {
+      width: 250px;
+      border-bottom: 1px solid #333;
+      margin: 0 auto 15px auto;
+    }
+    
+    .signature-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #e8e8e8;
+    }
+    
+    .signature-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding-top: 50px;
+      margin-top: 60px;
+      border-top: 1px solid #1a1a1a;
+    }
+    
+    .footer-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      color: #444;
+      letter-spacing: 2px;
+    }
+    
+    .confidential {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      color: #d4af37;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+    
+    /* End Mark */
+    .end-mark {
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .end-mark span {
+      font-style: italic;
+      font-size: 14px;
+      color: #444;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 40px 20px;
+      }
+      
+      .document-title {
+        font-size: 24px;
+      }
+      
+      .valuation-amount {
+        font-size: 22px;
+      }
+      
+      .valuation-amount.highlight {
+        font-size: 28px;
+      }
+      
+      .summary-table {
+        font-size: 12px;
+      }
+      
+      .lot-item {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">DGW Private Client</div>
+    <div class="tagline">Fine Art & Luxury Collectibles</div>
+  </header>
+  
+  <!-- Title -->
+  <h1 class="document-title">Appraisal & Auction Valuation</h1>
+  <div class="gold-line"></div>
+  
+  <!-- Client Info -->
+  <div class="client-box">
+    <h3>Client Information</h3>
+    <div class="client-row">
+      <span class="client-label">Prepared For:</span>
+      <span class="client-value">Ms. Laura Flood</span>
+    </div>
+    <div class="client-row">
+      <span class="client-label">Estate of:</span>
+      <span class="client-value">Anthony P. Bochichio</span>
+    </div>
+    <div class="client-row">
+      <span class="client-label">Address:</span>
+      <span class="client-value">613 Ridgebury Rd., Ridgefield, CT 06877</span>
+    </div>
+    <div class="client-row">
+      <span class="client-label">Date of Appraisal:</span>
+      <span class="client-value">January 12, 2026</span>
+    </div>
+    <div class="client-row">
+      <span class="client-label">Purpose:</span>
+      <span class="client-value">Suggested Auction Value / Estate Liquidation</span>
+    </div>
+    <div class="client-row">
+      <span class="client-label">Provenance:</span>
+      <span class="client-value">Wentworth Gallery (documented November 27, 2023)</span>
+    </div>
+  </div>
+  
+  <!-- Scope -->
+  <h2>Scope of Appraisal</h2>
+  <p>This appraisal covers 25 works of art purchased from Wentworth Gallery, comprising limited edition prints, bronze sculptures, and original paintings. Values provided represent suggested auction estimates based on current secondary market conditions, comparable sales data, and the appraiser's professional judgment.</p>
+  
+  <!-- Disclosure -->
+  <div class="disclosure-box">
+    <p><strong>Important Market Context:</strong> Wentworth Gallery operates in cruise ship and mall retail settings where primary market prices significantly exceed secondary market values. This is typical of the decorative art market. The estimates herein reflect achievable auction values, not original retail or replacement values. Secondary market values for gallery-sold decorative art typically realize 10–35% of original retail pricing.</p>
+  </div>
+  
+  <!-- Valuation Box -->
+  <div class="valuation-box">
+    <h3>Aggregate Valuation</h3>
+    <div class="valuation-row">
+      <div class="valuation-label">Original Purchase Price</div>
+      <div class="valuation-amount">$23,337.50</div>
+    </div>
+    <div class="gold-line"></div>
+    <div class="valuation-row">
+      <div class="valuation-label">Auction Estimate Range</div>
+      <div class="valuation-amount highlight">$2,780 – $8,085</div>
+    </div>
+  </div>
+  
+  <!-- Summary Table -->
+  <h2>Summary of Values</h2>
+  
+  <div class="table-container">
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th class="center">Lot</th>
+          <th>Artist</th>
+          <th>Title</th>
+          <th class="center">Edition</th>
+          <th class="right">Low Est.</th>
+          <th class="right">High Est.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="lot-num center">1</td>
+          <td class="artist">Bustamante</td>
+          <td class="title-cell">Fall - Four Seasons Suite</td>
+          <td class="edition center">20/225</td>
+          <td class="estimate right">$50</td>
+          <td class="estimate right">$150</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">2</td>
+          <td class="artist">Misha Frid</td>
+          <td class="title-cell">The Magic Flute-Sculpture</td>
+          <td class="edition center">11/195</td>
+          <td class="estimate right">$300</td>
+          <td class="estimate right">$800</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">3</td>
+          <td class="artist">Schluss</td>
+          <td class="title-cell">Fiddler-Sculpture</td>
+          <td class="edition center">21/150</td>
+          <td class="estimate right">$400</td>
+          <td class="estimate right">$1,200</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">4</td>
+          <td class="artist">Kelly</td>
+          <td class="title-cell">Sentinal</td>
+          <td class="edition center">~</td>
+          <td class="estimate right">$50</td>
+          <td class="estimate right">$150</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">5</td>
+          <td class="artist">Obican</td>
+          <td class="title-cell">The Counselors (at Law)-Black</td>
+          <td class="edition center">9/175</td>
+          <td class="estimate right">$75</td>
+          <td class="estimate right">$200</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">6</td>
+          <td class="artist">Keleman</td>
+          <td class="title-cell">Parade of Color (LG)</td>
+          <td class="edition center">~</td>
+          <td class="estimate right">$50</td>
+          <td class="estimate right">$150</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">7</td>
+          <td class="artist">Bustamante</td>
+          <td class="title-cell">Venetian Still Life</td>
+          <td class="edition center">100/295</td>
+          <td class="estimate right">$75</td>
+          <td class="estimate right">$200</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">8</td>
+          <td class="artist">Kam</td>
+          <td class="title-cell">52nd Street</td>
+          <td class="edition center">218/500</td>
+          <td class="estimate right">$50</td>
+          <td class="estimate right">$150</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">9</td>
+          <td class="artist">Rozenvain</td>
+          <td class="title-cell">Untitled</td>
+          <td class="edition center">1/1</td>
+          <td class="estimate right">$200</td>
+          <td class="estimate right">$600</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">10</td>
+          <td class="artist">Asfour</td>
+          <td class="title-cell">By the Fire</td>
+          <td class="edition center">363/385</td>
+          <td class="estimate right">$40</td>
+          <td class="estimate right">$100</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">11</td>
+          <td class="artist">Fitze</td>
+          <td class="title-cell">Geiger-Fiddles</td>
+          <td class="edition center">52/100</td>
+          <td class="estimate right">$75</td>
+          <td class="estimate right">$200</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">12</td>
+          <td class="artist">Simbari</td>
+          <td class="title-cell">Beauty & Wild Animals</td>
+          <td class="edition center">9/175</td>
+          <td class="estimate right">$300</td>
+          <td class="estimate right">$800</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">13</td>
+          <td class="artist">Claerebout</td>
+          <td class="title-cell">Music Series</td>
+          <td class="edition center">1/1</td>
+          <td class="estimate right">$300</td>
+          <td class="estimate right">$900</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">14</td>
+          <td class="artist">Shersher</td>
+          <td class="title-cell">Conductor</td>
+          <td class="edition center">1/1</td>
+          <td class="estimate right">$400</td>
+          <td class="estimate right">$1,200</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">15</td>
+          <td class="artist">Zaccheo</td>
+          <td class="title-cell">Evening on the Rialto</td>
+          <td class="edition center">HC4/20</td>
+          <td class="estimate right">$100</td>
+          <td class="estimate right">$300</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">16</td>
+          <td class="artist">Freeman</td>
+          <td class="title-cell">Intimacy</td>
+          <td class="edition center">87/650</td>
+          <td class="estimate right">$40</td>
+          <td class="estimate right">$125</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">17</td>
+          <td class="artist">Mouly</td>
+          <td class="title-cell">Nature Morte a la Lucarne</td>
+          <td class="edition center">285/300</td>
+          <td class="estimate right">$150</td>
+          <td class="estimate right">$400</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">18</td>
+          <td class="artist">Avataneo</td>
+          <td class="title-cell">Duerme</td>
+          <td class="edition center">122/250</td>
+          <td class="estimate right">$75</td>
+          <td class="estimate right">$250</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">19</td>
+          <td class="artist">Obican</td>
+          <td class="title-cell">The Doctors-Black</td>
+          <td class="edition center">78/175</td>
+          <td class="estimate right">$50</td>
+          <td class="estimate right">$150</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">20</td>
+          <td class="artist">Fitze</td>
+          <td class="title-cell">Stage Fright</td>
+          <td class="edition center">95/110</td>
+          <td class="estimate right">$50</td>
+          <td class="estimate right">$150</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">21</td>
+          <td class="artist">Schluss</td>
+          <td class="title-cell">Village Party</td>
+          <td class="edition center">292/350</td>
+          <td class="estimate right">$100</td>
+          <td class="estimate right">$350</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">22</td>
+          <td class="artist">Hewitt</td>
+          <td class="title-cell">Concerto I</td>
+          <td class="edition center">~</td>
+          <td class="estimate right">$75</td>
+          <td class="estimate right">$200</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">23</td>
+          <td class="artist">Hewitt</td>
+          <td class="title-cell">Concerto II</td>
+          <td class="edition center">~</td>
+          <td class="estimate right">$75</td>
+          <td class="estimate right">$200</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">24</td>
+          <td class="artist">Hewitt</td>
+          <td class="title-cell">Concerto IV</td>
+          <td class="edition center">~</td>
+          <td class="estimate right">$75</td>
+          <td class="estimate right">$200</td>
+        </tr>
+        <tr>
+          <td class="lot-num center">25</td>
+          <td class="artist">Mouly</td>
+          <td class="title-cell">Nature Morte aux Deux Instruments</td>
+          <td class="edition center">283/300</td>
+          <td class="estimate right">$150</td>
+          <td class="estimate right">$400</td>
+        </tr>
+        <tr class="totals-row">
+          <td colspan="4" style="text-align: right;">TOTALS</td>
+          <td class="right">$2,780</td>
+          <td class="right">$8,085</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Individual Lot Analysis -->
+  <h2>Individual Lot Analysis</h2>
+  <p>The following analysis provides individual assessments for each work, including edition information, market context, and justification for the suggested auction estimates.</p>
+  
+  <!-- Lot 1 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 1</span>
+      <span class="lot-artist">Bustamante</span> — <span class="lot-work-title">"Fall - Four Seasons Suite"</span>
+    </div>
+    <div class="lot-estimate">$50 – $150</div>
+    <div class="lot-details">Edition 20/225 &nbsp;•&nbsp; Original Purchase: $125.00</div>
+    <p class="lot-analysis">Bustamante limited edition prints are common in the secondary market. Four Seasons suites occasionally appear at auction. The low edition number (20/225) provides slight premium. Secondary market for decorative prints of this type typically realizes $25-150. Given the suite context and low edition number, pushing to $150 high is defensible.</p>
+  </div>
+  
+  <!-- Lot 2 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 2</span>
+      <span class="lot-artist">Misha Frid</span> — <span class="lot-work-title">"The Magic Flute-Sculpture"</span>
+    </div>
+    <div class="lot-estimate">$300 – $800</div>
+    <div class="lot-details">Edition 11/195 &nbsp;•&nbsp; Original Purchase: $3,497.50</div>
+    <p class="lot-analysis">Misha Frid bronze sculptures appear occasionally at auction. The Magic Flute is a recognizable theatrical subject. Bronze sculptures retain value better than prints due to material costs and craftsmanship. Low edition number (11/195) helps. However, Frid's secondary market is weak compared to primary retail. Frid bronzes have sold at auction ranging from $150-600 typically.</p>
+  </div>
+  
+  <!-- Lot 3 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 3</span>
+      <span class="lot-artist">Schluss</span> — <span class="lot-work-title">"Fiddler-Sculpture"</span>
+    </div>
+    <div class="lot-estimate">$400 – $1,200</div>
+    <div class="lot-details">Edition 21/150 &nbsp;•&nbsp; Original Purchase: $5,000.00</div>
+    <p class="lot-analysis">David Schluss is known for Judaica-themed bronzes, particularly fiddler/musician subjects which connect to the iconic "Fiddler on the Roof" imagery. These have collector appeal in the Jewish art market. Lower edition size (150) and desirable subject matter support higher estimates. Schluss bronzes with Jewish themes have sold at auction from $200-800 typically, with exceptional pieces reaching $1,000+.</p>
+  </div>
+  
+  <!-- Lot 4 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 4</span>
+      <span class="lot-artist">Kelly</span> — <span class="lot-work-title">"Sentinal"</span>
+    </div>
+    <div class="lot-estimate">$50 – $150</div>
+    <div class="lot-details">Unnumbered Edition &nbsp;•&nbsp; Original Purchase: $197.50</div>
+    <p class="lot-analysis">Without a specific first name, this is likely a lesser-known gallery artist. Unnumbered editions suggest open edition or artist proof, which typically command less in secondary markets. Limited auction history available. Generic gallery prints without strong artist recognition typically sell for $25-100 at auction. The $150 high assumes quality framing and presentation.</p>
+  </div>
+  
+  <!-- Lot 5 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 5</span>
+      <span class="lot-artist">Obican</span> — <span class="lot-work-title">"The Counselors (at Law)-Black"</span>
+    </div>
+    <div class="lot-estimate">$75 – $200</div>
+    <div class="lot-details">Edition 9/175 &nbsp;•&nbsp; Original Purchase: $197.50</div>
+    <p class="lot-analysis">Obican produces stylized figurative work. "The Counselors (at Law)" suggests professional/legal themed imagery which could appeal to attorney collectors. Low edition number (9/175) provides premium. Obican prints occasionally appear at auction, typically realizing $50-150. The niche subject matter (legal professionals) and low edition number justify the $200 high for targeted marketing.</p>
+  </div>
+  
+  <!-- Lot 6 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 6</span>
+      <span class="lot-artist">Keleman</span> — <span class="lot-work-title">"Parade of Color (LG)"</span>
+    </div>
+    <div class="lot-estimate">$50 – $150</div>
+    <div class="lot-details">Unnumbered Edition &nbsp;•&nbsp; Original Purchase: $297.50</div>
+    <p class="lot-analysis">Limited market data available for this artist. "LG" likely indicates Large size, which can add value. Unnumbered edition reduces collectibility. Gallery artists without strong secondary market presence typically realize $30-100. Size premium and quality presentation could push to $150.</p>
+  </div>
+  
+  <!-- Lot 7 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 7</span>
+      <span class="lot-artist">Bustamante</span> — <span class="lot-work-title">"Venetian Still Life"</span>
+    </div>
+    <div class="lot-estimate">$75 – $200</div>
+    <div class="lot-details">Edition 100/295 &nbsp;•&nbsp; Original Purchase: $497.50</div>
+    <p class="lot-analysis">Venetian themes are perennially popular in decorative art. Higher edition number (100/295) reduces scarcity premium compared to the Four Seasons piece above. Still life subjects have broad appeal. Bustamante prints with appealing subjects sell in the $50-150 range typically. The Venetian subject matter and larger edition justify slight premium to $200.</p>
+  </div>
+  
+  <!-- Lot 8 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 8</span>
+      <span class="lot-artist">Kam</span> — <span class="lot-work-title">"52nd Street"</span>
+    </div>
+    <div class="lot-estimate">$50 – $150</div>
+    <div class="lot-details">Edition 218/500 &nbsp;•&nbsp; Original Purchase: $447.50</div>
+    <p class="lot-analysis">Large edition size (500) significantly impacts collectibility. "52nd Street" suggests New York/jazz theme which has niche appeal. High edition number (218/500) is mid-run, not particularly desirable. High-edition decorative prints typically sell for $25-100. The jazz/NYC theme could attract specific collectors, justifying $150 ceiling.</p>
+  </div>
+  
+  <!-- Lot 9 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 9</span>
+      <span class="lot-artist">Rozenvain</span> — <span class="lot-work-title">"Untitled"</span>
+    </div>
+    <div class="lot-estimate">$200 – $600</div>
+    <div class="lot-details">1/1 (Unique Original) &nbsp;•&nbsp; Original Purchase: $997.50</div>
+    <p class="lot-analysis">Michael Rozenvain is known for colorful, surrealist-influenced work. <strong>1/1 designation indicates this is a unique original work</strong>, not a print—significantly more valuable. Rozenvain has some auction presence and collector following. Rozenvain original works have sold at auction ranging from $200-1,500 depending on size and subject. The unique status justifies premium estimates. "Untitled" designation is less marketable than named works.</p>
+  </div>
+  
+  <!-- Lot 10 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 10</span>
+      <span class="lot-artist">Asfour</span> — <span class="lot-work-title">"By the Fire"</span>
+    </div>
+    <div class="lot-estimate">$40 – $100</div>
+    <div class="lot-details">Edition 363/385 &nbsp;•&nbsp; Original Purchase: $347.50</div>
+    <p class="lot-analysis">Very high edition number (363 of 385)—essentially end of run. This significantly impacts collectibility and value. Late-run prints from large editions typically sell for $20-75. The $100 high assumes quality presentation and buyer who simply likes the image.</p>
+  </div>
+  
+  <!-- Lot 11 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 11</span>
+      <span class="lot-artist">Fitze</span> — <span class="lot-work-title">"Geiger-Fiddles"</span>
+    </div>
+    <div class="lot-estimate">$75 – $200</div>
+    <div class="lot-details">Edition 52/100 &nbsp;•&nbsp; Original Purchase: $297.50</div>
+    <p class="lot-analysis">Smaller edition size (100) is more collectible. Musical/fiddler theme connects to Jewish art market. Mid-run edition number (52/100) is acceptable. Fitze works occasionally appear at auction in the $50-150 range. The smaller edition and appealing subject justify pushing to $200.</p>
+  </div>
+  
+  <!-- Lot 12 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 12</span>
+      <span class="lot-artist">Simbari</span> — <span class="lot-work-title">"Beauty & Wild Animals"</span>
+    </div>
+    <div class="lot-estimate">$300 – $800</div>
+    <div class="lot-details">Edition 9/175 &nbsp;•&nbsp; Original Purchase: $1,225.00</div>
+    <p class="lot-analysis"><strong>Nicola Simbari (1927-2012) has legitimate auction presence.</strong> Italian artist known for vibrant Mediterranean scenes and figures. This is one of the more marketable artists in the collection. Very low edition number (9/175) provides premium. Simbari serigraphs regularly sell at auction for $200-600, with desirable subjects and low edition numbers reaching $800+. His original paintings can sell for $2,000-15,000+.</p>
+  </div>
+  
+  <!-- Lot 13 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 13</span>
+      <span class="lot-artist">Claerebout</span> — <span class="lot-work-title">"Music Series"</span>
+    </div>
+    <div class="lot-estimate">$300 – $900</div>
+    <div class="lot-details">1/1 (Unique Original) &nbsp;•&nbsp; Original Purchase: $1,497.50</div>
+    <p class="lot-analysis"><strong>1/1 indicates unique original work.</strong> Musical themes have collector appeal. Limited auction data for this artist, but original works command significant premiums over prints. Original works from gallery artists typically realize $200-800 at auction. The unique status and musical theme justify pushing to $900.</p>
+  </div>
+  
+  <!-- Lot 14 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 14</span>
+      <span class="lot-artist">Shersher</span> — <span class="lot-work-title">"Conductor"</span>
+    </div>
+    <div class="lot-estimate">$400 – $1,200</div>
+    <div class="lot-details">1/1 (Unique Original) &nbsp;•&nbsp; Original Purchase: $1,747.50</div>
+    <p class="lot-analysis"><strong>Dorit Shersher is an established Israeli artist with gallery representation and some auction history.</strong> Known for musical themes and orchestral subjects. <strong>1/1 unique original work.</strong> "Conductor" is a strong, marketable subject within her oeuvre. Shersher works appear at auction occasionally, with originals typically realizing $300-1,000. Her musical subjects are among her most popular. Unique original with strong subject justifies $1,200 high.</p>
+  </div>
+  
+  <!-- Lot 15 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 15</span>
+      <span class="lot-artist">Zaccheo</span> — <span class="lot-work-title">"Evening on the Rialto"</span>
+    </div>
+    <div class="lot-estimate">$100 – $300</div>
+    <div class="lot-details">HC4/20 (Hors Commerce) &nbsp;•&nbsp; Original Purchase: $447.50</div>
+    <p class="lot-analysis"><strong>HC (Hors Commerce) designation indicates artist proof/special edition—more valuable than standard numbered prints.</strong> Venetian/Italian subject matter is perennially popular. Only 20 HC impressions exist. HC proofs typically command 20-50% premium over standard editions. The desirable Venetian subject and limited HC run justify $300 high.</p>
+  </div>
+  
+  <!-- Lot 16 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 16</span>
+      <span class="lot-artist">Freeman</span> — <span class="lot-work-title">"Intimacy"</span>
+    </div>
+    <div class="lot-estimate">$40 – $125</div>
+    <div class="lot-details">Edition 87/650 &nbsp;•&nbsp; Original Purchase: $347.50</div>
+    <p class="lot-analysis">Very large edition (650) significantly reduces collectibility. High edition number reduces scarcity value. Large-edition prints typically sell for $25-75 at auction. The $125 ceiling assumes quality presentation.</p>
+  </div>
+  
+  <!-- Lot 17 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 17</span>
+      <span class="lot-artist">Mouly</span> — <span class="lot-work-title">"Nature Morte a la Lucarne"</span>
+    </div>
+    <div class="lot-estimate">$150 – $400</div>
+    <div class="lot-details">Edition 285/300 &nbsp;•&nbsp; Original Purchase: $412.50</div>
+    <p class="lot-analysis"><strong>Marcel Mouly (1918-2008) is the most auction-established artist in this collection.</strong> French artist with strong following and consistent auction results. However, 285/300 is very late in the edition run, which impacts value. Mouly serigraphs regularly appear at auction, typically selling for $100-500 depending on subject and edition position. His still life subjects ("Nature Morte") are core to his work. Despite late edition number, Mouly's market strength justifies $400 high.</p>
+  </div>
+  
+  <!-- Lot 18 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 18</span>
+      <span class="lot-artist">Avataneo</span> — <span class="lot-work-title">"Duerme"</span>
+    </div>
+    <div class="lot-estimate">$75 – $250</div>
+    <div class="lot-details">Edition 122/250 &nbsp;•&nbsp; Original Purchase: $675.00</div>
+    <p class="lot-analysis">Limited auction data available. "Duerme" (Spanish for "Sleep") suggests figurative subject. Mid-run edition number from moderate edition size. Gallery artists without strong secondary markets typically realize $50-150. The moderate edition size and presumably quality subject justify $250 ceiling.</p>
+  </div>
+  
+  <!-- Lot 19 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 19</span>
+      <span class="lot-artist">Obican</span> — <span class="lot-work-title">"The Doctors-Black"</span>
+    </div>
+    <div class="lot-estimate">$50 – $150</div>
+    <div class="lot-details">Edition 78/175 &nbsp;•&nbsp; Original Purchase: $197.50</div>
+    <p class="lot-analysis">Professional-themed imagery (doctors) has niche appeal to healthcare professionals. Mid-run edition from moderate edition size. Similar to "The Counselors" piece above. Medical-themed art can appeal to healthcare professionals. Typical Obican auction results of $50-150 apply.</p>
+  </div>
+  
+  <!-- Lot 20 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 20</span>
+      <span class="lot-artist">Fitze</span> — <span class="lot-work-title">"Stage Fright"</span>
+    </div>
+    <div class="lot-estimate">$50 – $150</div>
+    <div class="lot-details">Edition 95/110 &nbsp;•&nbsp; Original Purchase: $178.00</div>
+    <p class="lot-analysis">Smaller edition size (110) is positive, but very late edition number (95/110) negates some of that benefit. Theatrical subject matter has appeal. Late-run prints typically sell toward lower end. The smaller overall edition and subject matter justify $150 high.</p>
+  </div>
+  
+  <!-- Lot 21 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 21</span>
+      <span class="lot-artist">Schluss</span> — <span class="lot-work-title">"Village Party"</span>
+    </div>
+    <div class="lot-estimate">$100 – $350</div>
+    <div class="lot-details">Edition 292/350 &nbsp;•&nbsp; Original Purchase: $1,475.00</div>
+    <p class="lot-analysis">David Schluss serigraph (vs. bronze sculpture above). Village/celebration themes are popular in his work. Very late edition number (292/350) impacts value significantly. Schluss serigraphs typically sell for $75-300 at auction. Despite late edition number, his collector base and appealing subject justify $350 high.</p>
+  </div>
+  
+  <!-- Lot 22 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 22</span>
+      <span class="lot-artist">Hewitt</span> — <span class="lot-work-title">"Concerto I"</span>
+    </div>
+    <div class="lot-estimate">$75 – $200</div>
+    <div class="lot-details">Unnumbered Edition &nbsp;•&nbsp; Original Purchase: $497.50</div>
+    <p class="lot-analysis">Musical theme (Concerto). Unnumbered edition reduces collectibility but these may be hand-embellished or unique in some way. Part of a series. Musical themed gallery art has consistent appeal. Assuming quality presentation, $200 is achievable.</p>
+  </div>
+  
+  <!-- Lot 23 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 23</span>
+      <span class="lot-artist">Hewitt</span> — <span class="lot-work-title">"Concerto II"</span>
+    </div>
+    <div class="lot-estimate">$75 – $200</div>
+    <div class="lot-details">Unnumbered Edition &nbsp;•&nbsp; Original Purchase: $497.50</div>
+    <p class="lot-analysis">Same analysis as Concerto I. Series pieces can be sold together or separately. If sold as a set with other Concerto pieces, may achieve slight premium.</p>
+  </div>
+  
+  <!-- Lot 24 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 24</span>
+      <span class="lot-artist">Hewitt</span> — <span class="lot-work-title">"Concerto IV"</span>
+    </div>
+    <div class="lot-estimate">$75 – $200</div>
+    <div class="lot-details">Unnumbered Edition &nbsp;•&nbsp; Original Purchase: $497.50</div>
+    <p class="lot-analysis">Same analysis as above. Note: Concerto III is not present—may affect set desirability. Three-piece partial set could be marketed as group or individually.</p>
+  </div>
+  
+  <!-- Lot 25 -->
+  <div class="lot-item">
+    <div class="lot-header">
+      <span class="lot-number">Lot 25</span>
+      <span class="lot-artist">Mouly</span> — <span class="lot-work-title">"Nature Morte aux Deux Instruments"</span>
+    </div>
+    <div class="lot-estimate">$150 – $400</div>
+    <div class="lot-details">Edition 283/300 &nbsp;•&nbsp; Original Purchase: $525.00</div>
+    <p class="lot-analysis">Second Mouly in collection. Musical instruments in still life is appealing subject combining two popular themes. Again, very late edition number (283/300). Same Mouly market analysis applies. Musical subject may appeal to broader collector base than pure still life.</p>
+  </div>
+  
+  <!-- Methodology -->
+  <h2>Methodology & Limiting Conditions</h2>
+  
+  <h3 style="font-size: 16px; color: #d4af37; margin: 30px 0 15px 0; font-weight: 500;">Valuation Methodology</h3>
+  <p>Values were determined using the market data approach, considering: (1) recent auction results for comparable works by the same artists; (2) edition size and position within the edition; (3) subject matter desirability and collector demand; (4) medium (original works, bronzes, and limited editions valued accordingly); (5) condition assumptions based on provenance from a reputable gallery; and (6) current market conditions for secondary decorative art.</p>
+  
+  <h3 style="font-size: 16px; color: #d4af37; margin: 30px 0 15px 0; font-weight: 500;">Limiting Conditions</h3>
+  <p>This appraisal is provided for estate planning and auction consignment purposes only. Values assume works are in good condition consistent with their age and medium. Physical inspection was not conducted; values may be subject to revision upon examination. Auction results are not guaranteed and depend on market conditions, buyer interest, and presentation at time of sale. This appraisal does not constitute an offer to purchase.</p>
+  
+  <!-- Signature -->
+  <div class="signature-section">
+    <p class="intro">Respectfully submitted,</p>
+    <div class="signature-line"></div>
+    <div class="signature-name">Dan Garmon</div>
+    <div class="signature-title">President & Owner</div>
+    <div class="signature-title">DGW Collectibles & Estates</div>
+    <div class="signature-title" style="margin-top: 15px;">January 12, 2026</div>
+  </div>
+  
+  <!-- End Mark -->
+  <div class="end-mark">
+    <div class="gold-line"></div>
+    <span>End of Appraisal Report</span>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-text">DGW Collectibles & Estates &nbsp;•&nbsp; Poughkeepsie, NY</div>
+    <div class="confidential">Confidential</div>
+  </footer>
+  
+</div>
+
+</body>
+</html>
